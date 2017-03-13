@@ -37,7 +37,7 @@ a:hover{
 .register{
   background: url("../images/bg-1.jpg") no-repeat center;
   background-size: 100% 100%;
-  header{
+  >header{
     padding:10px 0;
     border-bottom: 1px solid rgba(200,200,200,0.5);
     img{
@@ -97,6 +97,168 @@ a:hover{
     }
     button{
       .btn-submit;
+    }
+  }
+}
+//queryInfo.html
+.query{
+  .register;
+  main{
+    .queryDate{
+      border-bottom: 1px solid rgba(200,200,200,0.5);
+      p{
+        text-align: center;
+        color:white;
+        font-size: 1.6rem;
+        input{
+          width: 50%;
+          border:none;
+          border-radius: 10px;
+          background: #d4e3ee;
+          color:black;
+          padding-left: 5px;
+        }
+      }
+    }
+    .showInfo{
+      p{
+        text-align: center;
+        color:white;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        input{
+          width: 50%;
+          border:none;
+          border-radius: 10px;
+          background: #d4e3ee;
+          color:black;
+          padding-left: 5px;
+        }
+      }
+    }
+    a.btn-link{
+      width: 30%;
+      position: absolute;
+      top:5px;
+      background: none;
+      border:none;
+      &:first-of-type{
+        left:10px;
+      }
+      &:last-of-type{
+        right:10px;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+//award-setting.html
+.awards-setting{
+  .register;
+  header{
+    button{
+      background: none;
+      border:none;
+      width: 50%;
+      display: block;
+      margin:10px auto;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  main{
+    .setLine{
+      border-bottom: 1px solid rgba(200,200,200,0.5);
+      p{
+        text-align: center;
+        color:white;
+        font-size: 1.6rem;
+        padding:10px 0;
+        input{
+          width: 5em;
+          border:none;
+          color:white;
+          text-align: center;
+          border-radius: 10px;
+          background: #1f4762;
+          line-height: 1.5em;
+        }
+      }
+    }
+    .awards-area{
+      width: 90%;
+      margin:10px auto;
+      background: #fe9619;
+      border-radius: 10px;
+      border:5px solid #fe9619;
+      .awards-table{
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+        border-collapse:collapse;
+        thead{
+          color:white;
+        }
+        tbody{
+          background: #f9f9d8;
+          tr{
+            td{
+              padding:5px 0;
+              color:#fe9619;
+              font-size: 1.6rem;
+              &:nth-of-type(2){
+                div{
+                  background: #fe9619;
+                  color:white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//my-ticket.html
+.my-ticket{
+  background: url("../images/bg-2.jpg") no-repeat center;
+  background-size: 100% 100%;
+  .ticket-area{
+    position: relative;
+    width: 90%;
+    margin: 50px auto 0 auto;
+    padding-top: 20px;
+    border:5px solid #ffa676;
+    border-radius: 5px;
+    background: #f9f9d8;
+    img{
+      position: absolute;
+      width: 60%;
+      top:0;
+      left:50%;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    .ticket-contant{
+      width: 90%;
+      margin:5px auto;
+      background: url("../images/ticket-bg.png") no-repeat center;
+      background-size: 100% 100%;
+      padding:5px;
+      color:white;
+      p.ticket-name{
+        font-size: 2.0rem;
+      }
+    }
+  }
+  p.tishi-info{
+    color:white;
+    text-align: center;
+    span{
+      color:#fff600;
     }
   }
 }

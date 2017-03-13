@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>信息查询</title>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="query">
+    <header>
+        <img src="images/find-ico.png" alt="qrcode">
+    </header>
+    <main>
+        <div class="queryDate">
+            <p>查询日期：<input type="text" id='datetime-begin'/></p>
+            <p>截至日期：<input type="text" id='datetime-end'/></p>
+        </div>
+        <div class="showInfo">
+            <p>抽奖人数：<input type="text" readonly></p>
+            <div class="chart-area"></div>
+        </div>
+        <a class="btn-link" href="register.html"><img src="images/btn-choujiang.png" alt="choujiang"></a>
+        <a class="btn-link" href="register.html"><img src="images/btn-info.png" alt="info"></a>
+    </main>
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script>
+        $("#datetime-begin").datetimePicker({});
+        $("#datetime-end").datetimePicker({});
+    </script>
+</body>
+</html>
