@@ -20,6 +20,17 @@ a:hover {
   color: inherit;
   cursor: pointer;
 }
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+  display: none;
+}
 .btn-submit {
   display: block;
   width: 80%;
@@ -211,7 +222,8 @@ a:hover {
 .query main .queryDate p {
   text-align: center;
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 2;
 }
 .query main .queryDate p input {
   width: 50%;
@@ -220,11 +232,13 @@ a:hover {
   background: #d4e3ee;
   color: black;
   padding-left: 5px;
+  font-size: 2rem;
 }
 .query main .showInfo p {
   text-align: center;
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 2;
   margin-bottom: 10px;
 }
 .query main .showInfo p input {
@@ -233,6 +247,7 @@ a:hover {
   border-radius: 10px;
   background: #d4e3ee;
   color: black;
+  font-size: 2rem;
   padding-left: 5px;
 }
 .query main a.btn-link {
@@ -305,6 +320,7 @@ a:hover {
   background: none;
   border: none;
   width: 50%;
+  max-width: 161px;
   display: block;
   margin: 10px auto;
 }
@@ -354,8 +370,89 @@ a:hover {
   font-size: 1.6rem;
 }
 .awards-setting main .awards-area .awards-table tbody tr td:nth-of-type(2) div {
+  position: relative;
   background: #fe9619;
   color: white;
+}
+.awards-setting main .awards-area .awards-table tbody tr td:nth-of-type(2) div div.change-awards {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.awards-setting main .awards-area .awards-table tbody tr td:nth-of-type(2) div div.change-awards button {
+  height: 100%;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  float: left;
+}
+.awards-setting main .awards-area .awards-table tbody tr td:nth-of-type(2) div div.change-awards button:last-of-type {
+  float: right;
+}
+.awards-setting .add-awards .add-awards-div {
+  width: 90%;
+  margin: 30px auto 0 auto;
+  padding: 10px 5px;
+  background: #fff4dc;
+  border-radius: 10px;
+}
+.awards-setting .add-awards .add-awards-div p,
+.awards-setting .add-awards .add-awards-div h3 {
+  color: #d72517;
+}
+.awards-setting .add-awards .add-awards-div h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.awards-setting .add-awards .add-awards-div .awards-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.awards-setting .add-awards .add-awards-div .awards-name input {
+  text-align: center;
+  width: 70%;
+  font-size: 2rem;
+  line-height: 2;
+  color: #d72517;
+  background: #fe9619;
+  border: none;
+}
+.awards-setting .add-awards .add-awards-div .awards-number {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.awards-setting .add-awards .add-awards-div .awards-number input {
+  text-align: center;
+  width: 5em;
+  font-size: 2rem;
+  line-height: 2;
+  color: #d72517;
+  background: #fe9619;
+  border: none;
+}
+.awards-setting .add-awards .add-awards-div div.div-line {
+  height: 1px;
+  background: rgba(200, 200, 200, 0.5);
+  margin-bottom: 10px;
+}
+.awards-setting .add-awards .add-awards-div .awards-beizhu {
+  font-size: 2rem;
+}
+.awards-setting .add-awards .add-awards-div .awards-beizhu input {
+  line-height: 1.5rem;
+}
+.awards-setting .add-awards .add-awards-div button.btn-submit {
+  width: 30%;
+  font-size: 1.4rem;
+  height: 2.5rem;
+  background: #fe9619;
+  margin: 10px auto;
 }
 .my-ticket {
   background: url("../images/bg-2.jpg") no-repeat center;

@@ -8,7 +8,7 @@
 </head>
 <body class="awards-setting">
     <header>
-        <button><img src="images/add-awards.png" alt="qrcode"></button>
+        <button class="btn-addAwards"><img src="images/add-awards.png" alt="qrcode"></button>
     </header>
     <main>
         <div class="setLine">
@@ -26,28 +26,48 @@
                     <tr>
                         <td>一等奖</td>
                         <td>
-                            <div><p>免费券</p><p>有效期：2天</p></div>
+                            <div><p>免费券</p><p>有效期：2天</p>
+                                <div class="change-awards">
+                                    <button class="write-awards">编辑</button>
+                                    <button class="del-awards">删除</button>
+                                </div>
+                            </div>
                         </td>
                         <td>10名</td>
                     </tr>
                     <tr>
                         <td>一等奖</td>
                         <td>
-                            <div><p>免费券</p><p>有效期：2天</p></div>
+                            <div><p>免费券</p><p>有效期：2天</p>
+                                <div class="change-awards">
+                                    <button class="write-awards">编辑</button>
+                                    <button class="del-awards">删除</button>
+                                </div>
+                            </div>
                         </td>
                         <td>10名</td>
                     </tr>
                     <tr>
                         <td>一等奖</td>
                         <td>
-                            <div><p>免费券</p><p>有效期：2天</p></div>
+                            <div><p>免费券</p><p>有效期：2天</p>
+                                <div class="change-awards">
+                                    <button class="write-awards">编辑</button>
+                                    <button class="del-awards">删除</button>
+                                </div>
+                            </div>
                         </td>
                         <td>10名</td>
                     </tr>
                     <tr>
                         <td>一等奖</td>
                         <td>
-                            <div><p>免费券</p><p>有效期：2天</p></div>
+                            <div><p>免费券</p><p>有效期：2天</p>
+                                <div class="change-awards">
+                                    <button class="write-awards">编辑</button>
+                                    <button class="del-awards">删除</button>
+                                </div>
+                            </div>
                         </td>
                         <td>10名</td>
                     </tr>
@@ -55,5 +75,34 @@
             </table>
         </div>
     </main>
+    <div class="dialog add-awards">
+        <div>
+            <div class="add-awards-div">
+                <h3>一等奖</h3>
+                <p class="awards-name"><input type="text"></p>
+                <p class="awards-number">数量：<input type="number">个</p>
+                <div class="div-line"></div>
+                <p class="awards-beizhu">备注：<input type="text"></p>
+                <button class="btn-submit">确认</button>
+            </div>
+        </div>
+    </div>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.btn-addAwards').on('click',function () {
+            $('.add-awards').show();
+        });
+        $('.add-awards-div .btn-submit').on('click',function () {
+            $('.add-awards').hide();
+        });
+        $('tr').on('click',function () {
+            $(this).find('.change-awards').toggle();
+        });
+        $('.change-awards .write-awards').on('click',function () {
+            $('.add-awards').show();
+        });
+    })
+</script>
 </body>
 </html>
