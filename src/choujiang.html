@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>抽奖</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="choujiang">
+    <main class="choujiang-area">
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""><div class="animate-box" ><img src="images/choujiang-box.png" alt=""></div></div>
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
+        <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
+    </main>
+    <img src="images/start.jpg" alt="" class="img-start">
+    <p class="choujiang-link"><img src="images/wenhao.png" alt=""><a href="choujiang-info.html">抽奖说明</a></p>
+    <a class="btn-my-ticket" href="my-ticket.html">
+        <img src="images/btn-my-ticket.png" alt="">
+        <div class="ticket-number">3</div>
+    </a>
+    <div class="dialog kaixiang">
+        <div class="gif-kaixiang">
+            <img src="images/kaixiang.gif" alt="">
+        </div>
+    </div>
+    <div class="dialog meizhong">
+        <div class="meizhong-info">
+            <div class="meizhong-content">
+                <p>　亲，您没中奖哦！</p>
+                <p>　扫码再接再厉！</p>
+            </div>
+
+        </div>
+        <button class="btn-submit">再来一次</button>
+    </div>
+    <div class="dialog zhongjiang">
+        <div class="zhongjiang-info">
+            <div class="zhongjiang-content">
+                <div class="ticket-contant">
+                    <p class="ticket-name">麦当劳优惠券</p>
+                    <p class="ticket-date">有效期至2017.03.20 19:00前</p>
+                    <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
+                </div>
+                <div class="div-line"></div>
+                <div class="xuanchuan-contant">
+                    <p>这个是宣传标语！</p>
+                </div>
+                <div class="xuanchuan-contant">
+                    <p>这个是宣传标语！</p>
+                </div>
+                <div class="xuanchuan-contant">
+                    <p>这个是宣传标语！</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn-submit">再来一次</button>
+    </div>
+    <div class="dialog error">
+        <div class="error-info">
+            <img src="images/error.png" alt="">
+            <button class="btn-close"></button>
+        </div>
+    </div>
+
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.choujiang-box').on('click',function () {
+            $('.kaixiang').show();
+            setTimeout(function () {
+                $('.zhongjiang').show();
+            },4500);
+        });
+    });
+    window.onload=function () {
+        $('.animate-box').addClass('animate-begin');
+        setTimeout(function () {
+            $('img.img-start').addClass('fadeIn');
+        },3000);
+    }
+</script>
+</body>
+</html>

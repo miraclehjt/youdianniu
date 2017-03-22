@@ -43,7 +43,28 @@ a:hover{
   background: #ff6469;
   border-radius: 2rem;
 }
-
+div.div-line{
+  height: 1px;
+  background: rgba(200,200,200,0.5);
+  margin-bottom: 10px;
+}
+@keyframes boxAnimate{
+  from {transform: translate(0,0);}
+  16.666% {transform: translate(0,100%);}
+  50% {transform: translate(200%,100%);}
+  66.666% {transform: translate(200%,0);}
+  100% {transform: translate(0,0);}
+}
+.animate-begin{
+  animation: boxAnimate 3s;
+}
+@keyframes fadeIn{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.fadeIn{
+  animation: fadeIn 1s forwards;
+}
 //register.html
 .register{
   background: url("../images/bg-1.jpg") no-repeat center;
@@ -114,6 +135,12 @@ a:hover{
 //queryInfo.html
 .query{
   .register;
+  h1.title{
+    font-size: 2.0rem;
+  }
+  .bar .button.pull-right{
+    font-size: 2.0rem;
+  }
   main{
     .queryDate{
       border-bottom: 1px solid rgba(200,200,200,0.5);
@@ -121,7 +148,6 @@ a:hover{
         text-align: center;
         color:white;
         font-size: 2rem;
-        line-height: 2;
         input{
           width: 50%;
           border:none;
@@ -138,7 +164,6 @@ a:hover{
         text-align: center;
         color:white;
         font-size: 2rem;
-        line-height: 2;
         margin-bottom: 10px;
         input{
           width: 50%;
@@ -219,12 +244,23 @@ a:hover{
           color: white;
         }
         tbody {
-          background: #f9f9d8;
+          background: #f3eec3;
           tr {
+            &:nth-of-type(odd){
+              background: #f9f9d8;
+            }
             td {
               padding: 5px 0;
               color: #fe9619;
               font-size: 1.6rem;
+              input{
+                width: 100%;
+                background: none;
+                border: none;
+                font-size: 1.6rem;
+                min-height:2em;
+                padding:0 5px;
+              }
               &:nth-of-type(2) {
                 div {
                   position: relative;
@@ -256,6 +292,9 @@ a:hover{
           }
         }
       }
+    }
+    button.btn-submit{
+      background: #fe9619;
     }
   }
   .add-awards{
@@ -299,11 +338,7 @@ a:hover{
           border:none;
         }
       }
-      div.div-line{
-        height: 1px;
-        background: rgba(200,200,200,0.5);
-        margin-bottom: 10px;
-      }
+
       .awards-beizhu{
         font-size: 2rem;
         input{
@@ -358,5 +393,209 @@ a:hover{
     span{
       color:#fff600;
     }
+  }
+  button.btn-submit{
+    background: #fe9619;
+  }
+}
+//choujiang.html
+.choujiang{
+  background: #e74143 url("../images/bg-3.jpg") no-repeat top;
+  background-size: 100%;
+  padding-top: 80%;
+  padding-bottom: 20px;
+  main.choujiang-area{
+    width: 90%;
+    margin:0 auto 20px auto;
+    overflow: auto;
+    .choujiang-box{
+      position: relative;
+      width: 33.333%;
+      padding:10px;
+      float: left;
+      img{
+        width: 100%;
+      }
+      .animate-box{
+        position: absolute;
+        z-index: 2;
+        top:0;
+        left:0;
+        padding:10px;
+      }
+    }
+  }
+  img.img-start{
+    display: block;
+    margin:10px auto;
+    width: 50%;
+    opacity: 0;
+  }
+  p.choujiang-link{
+    clear: both;
+    text-align: center;
+    font-size: 2rem;
+    color:white;
+    line-height: 1;
+    a{
+      text-decoration: underline;
+    }
+    img{
+      width: 1.5rem;
+      vertical-align: middle;
+    }
+  }
+  a.btn-my-ticket{
+    z-index:1000;
+    position: absolute;
+    top:0;
+    right:15%;
+    img{
+      width: 100px;
+    }
+    .ticket-number{
+      width: 2em;
+      height: 2em;
+      background: #e74c3c;
+      color:#ffe26a;
+      font-size: 12px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 2em;
+      position: absolute;
+      top:0;
+      right:0;
+    }
+  }
+  .meizhong{
+    padding-top: 30px;
+    .meizhong-info{
+      background: url("../images/bg-meizhong.png") no-repeat top;
+      background-size: 100% auto;
+      width: 80%;
+      margin:0 auto;
+      padding-top: 90%;
+      position: relative;
+      .meizhong-content{
+        position: absolute;
+        top:50%;
+        width: 100%;
+        p{
+          width: 100%;
+          text-align: center;
+          font-size: 2rem;
+          color:#8d5000;
+          padding:0 1em
+        }
+      }
+    }
+    button{
+      width: 60%;
+      background: #d72517;
+      color:#ffe26a;
+    }
+  }
+  .zhongjiang{
+    padding-top: 30px;
+    .zhongjiang-info{
+      background: url("../images/bg-zhongjiang.png") no-repeat top;
+      background-size: 100% auto;
+      width: 80%;
+      margin:0 auto;
+      padding-top: 37%;
+      position: relative;
+      .zhongjiang-content{
+        background: #fff0c5;
+        background-clip: content-box;
+        width: 100%;
+        overflow: scroll;
+        padding:0 8%;
+        .ticket-contant{
+          width: 75%;
+          margin:5px auto;
+          background: url("../images/ticket-bg-2.png") no-repeat center;
+          background-size: 100% 100%;
+          padding:5px;
+          color:white;
+          p.ticket-name{
+            font-size: 2.0rem;
+          }
+        }
+        .xuanchuan-contant{
+          min-height: 4em;
+          width: 75%;
+          margin:5px auto;
+          color:white;
+          font-size: 1.6rem;
+          background: #ff960e;
+          border: 3px solid #ff960e;
+          padding:1px;
+          background-clip: content-box;
+        }
+      }
+    }
+    button{
+      width: 60%;
+      background: #d72517;
+      color:#ffe26a;
+    }
+  }
+  .error{
+    padding-top: 20%;
+    .error-info{
+      width: 80%;
+      margin:0 auto;
+      position: relative;
+      img{
+        width: 100%;
+      }
+      button.btn-close{
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        bottom: 12%;
+        background: none;
+        border:none;
+      }
+    }
+  }
+  .kaixiang{
+    .gif-kaixiang{
+      position: absolute;
+      width: 80%;
+      top:15%;
+      left:50%;
+      -webkit-transform: translate(-50%,0);
+      transform: translate(-50%,0);
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+//choujiang-info.html
+.choujiang-info{
+  background: url("../images/bg-2.jpg") no-repeat center;
+  background-size: 100% 100%;
+  h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color:#fff600;
+    margin-top:20px;
+  }
+  button.btn-submit{
+    background: #fe9619;
+  }
+  main{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    padding-top: 10px;
+    border:5px solid #ffa676;
+    border-radius: 5px;
+    background: #f9f9d8;
+    white-space: pre-wrap;
+    font-size: 1.6rem;
+    color:#d72517;
   }
 }
