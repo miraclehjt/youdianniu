@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 10px !important;
 }
 body {
   position: relative;
@@ -47,25 +47,61 @@ div.div-line {
   background: rgba(200, 200, 200, 0.5);
   margin-bottom: 10px;
 }
-@keyframes boxAnimate {
+@-webkit-keyframes boxAnimate {
   from {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
   16.666% {
-    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
   }
   50% {
-    transform: translate(200%, 100%);
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
   }
   66.666% {
-    transform: translate(200%, 0);
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
   }
   100% {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes boxAnimate {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  16.666% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  50% {
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
+  }
+  66.666% {
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 .animate-begin {
-  animation: boxAnimate 3s;
+  -webkit-animation: boxAnimate 3s;
+          animation: boxAnimate 3s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -76,7 +112,8 @@ div.div-line {
   }
 }
 .fadeIn {
-  animation: fadeIn 1s forwards;
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
 }
 .register {
   background: url("../images/bg-1.jpg") no-repeat center;
@@ -115,7 +152,9 @@ div.div-line {
   min-width: 60%;
 }
 .register main form label select {
+  font-size: 1.6rem;
   min-width: 6em;
+  height: 25px;
 }
 .register main form button {
   display: block;
@@ -165,7 +204,9 @@ div.div-line {
   min-width: 60%;
 }
 .qrcode main form label select {
+  font-size: 1.6rem;
   min-width: 6em;
+  height: 25px;
 }
 .qrcode main form button {
   display: block;
@@ -239,7 +280,9 @@ div.div-line {
   min-width: 60%;
 }
 .query main form label select {
+  font-size: 1.6rem;
   min-width: 6em;
+  height: 25px;
 }
 .query main form button {
   display: block;
@@ -343,7 +386,9 @@ div.div-line {
   min-width: 60%;
 }
 .awards-setting main form label select {
+  font-size: 1.6rem;
   min-width: 6em;
+  height: 25px;
 }
 .awards-setting main form button {
   display: block;
@@ -383,7 +428,7 @@ div.div-line {
   text-align: center;
   border-radius: 10px;
   background: #1f4762;
-  line-height: 1.5em;
+  height: 1.5em;
 }
 .awards-setting main .awards-area {
   width: 90%;
@@ -461,8 +506,12 @@ div.div-line {
 }
 .awards-setting .add-awards .add-awards-div h3 {
   text-align: center;
+}
+.awards-setting .add-awards .add-awards-div h3 select {
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 15px;
+  color: #d72517;
 }
 .awards-setting .add-awards .add-awards-div .awards-name {
   text-align: center;
@@ -655,10 +704,11 @@ div.div-line {
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content {
   background: #fff0c5;
-  background-clip: content-box;
-  width: 100%;
+  width: 84%;
   overflow: scroll;
-  padding: 0 8%;
+  margin: 0 8%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant {
   width: 75%;
@@ -716,6 +766,16 @@ div.div-line {
 }
 .choujiang .kaixiang .gif-kaixiang img {
   width: 100%;
+}
+.choujiang .gif-loading {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 50px;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .choujiang-info {
   background: url("../images/bg-2.jpg") no-repeat center;

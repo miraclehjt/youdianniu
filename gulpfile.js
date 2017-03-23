@@ -22,7 +22,7 @@ var cssSrc = 'src/css/*.css',
     jsDest = 'dist/js',
     fontSrc = 'src/fonts/*',
     fontDest = 'dist/fonts',
-    imgSrc = 'src/images/src/*.{png,jpg,gif}',
+    imgSrc = 'src/images/*.{png,jpg,gif}',
     imgDest = 'dist/images',
     cssRevSrc = 'src/css/revCss';
 
@@ -71,7 +71,7 @@ gulp.task('imagemin', function() {
             progressive: true,
             use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
         }))
-        .pipe(gulp.dest('src/images/min/src'));
+        .pipe(gulp.dest('src/images/min'));
 });
 
 //压缩js文件

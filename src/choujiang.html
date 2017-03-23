@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body class="choujiang">
+<img src="images/loading.gif" alt="" class="gif-loading">
     <main class="choujiang-area">
         <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""><div class="animate-box" ><img src="images/choujiang-box.png" alt=""></div></div>
         <div class="choujiang-box"><img src="images/choujiang-box.png" alt=""></div>
@@ -21,9 +22,9 @@
         <img src="images/btn-my-ticket.png" alt="">
         <div class="ticket-number">3</div>
     </a>
+    <img src="images/kaixiang.gif" alt="" style="display: none;">
     <div class="dialog kaixiang">
         <div class="gif-kaixiang">
-            <img src="images/kaixiang.gif" alt="">
         </div>
     </div>
     <div class="dialog meizhong">
@@ -69,18 +70,34 @@
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <script>
     $(function () {
-        $('.choujiang-box').on('click',function () {
-            $('.kaixiang').show();
+        var gif_img=document.createElement('img');
+        gif_img.src='images/kaixiang.gif?'+_getRandomString(6);
+        gif_img.onload=function(){
+            $('.gif-loading').hide();
+            $('.animate-box').addClass('animate-begin');
             setTimeout(function () {
-                $('.zhongjiang').show();
-            },4500);
-        });
+                $('img.img-start').addClass('fadeIn');
+            },3000);
+            $('.choujiang-box').on('click',function () {
+                $('.kaixiang').show();
+                $('.kaixiang .gif-kaixiang').append($(gif_img));
+                setTimeout(function () {
+                    $('.zhongjiang').show();
+                },4500);
+            });
+        };
     });
-    window.onload=function () {
-        $('.animate-box').addClass('animate-begin');
-        setTimeout(function () {
-            $('img.img-start').addClass('fadeIn');
-        },3000);
+
+    //生成随机字符串
+    function _getRandomString(len) {
+        len = len || 32;
+        var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; // 默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1
+        var maxPos = chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return pwd;
     }
 </script>
 </body>

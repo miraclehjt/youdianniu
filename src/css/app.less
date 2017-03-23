@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 10px !important;
 }
 body {
   position: relative;
@@ -101,7 +101,9 @@ div.div-line{
           min-width: 60%;
         }
         select{
+          font-size: 1.6rem;
           min-width: 6em;
+          height: 25px;
         }
       }
       button{
@@ -225,7 +227,7 @@ div.div-line{
           text-align: center;
           border-radius: 10px;
           background: #1f4762;
-          line-height: 1.5em;
+          height: 1.5em;
         }
       }
     }
@@ -309,8 +311,12 @@ div.div-line{
       }
       h3{
         text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 15px;
+        select{
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 15px;
+          color:#d72517;
+        }
       }
       .awards-name{
         text-align: center;
@@ -506,10 +512,11 @@ div.div-line{
       position: relative;
       .zhongjiang-content{
         background: #fff0c5;
-        background-clip: content-box;
-        width: 100%;
+        width: 84%;
         overflow: scroll;
-        padding:0 8%;
+        margin:0 8%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         .ticket-contant{
           width: 75%;
           margin:5px auto;
@@ -571,6 +578,16 @@ div.div-line{
         width: 100%;
       }
     }
+  }
+  .gif-loading{
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    z-index:10;
+    width: 50px;
+    top:45%;
+    left:50%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
   }
 }
 //choujiang-info.html
