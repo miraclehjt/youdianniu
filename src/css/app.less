@@ -34,7 +34,7 @@ a:hover{
 }
 .btn-submit{
   display: block;
-  width: 80%;
+  width: 50%;
   margin:40px auto;
   height: 4rem;
   color:white;
@@ -47,6 +47,9 @@ div.div-line{
   height: 1px;
   background: rgba(200,200,200,0.5);
   margin-bottom: 10px;
+}
+.display-none{
+  display: none;
 }
 @keyframes boxAnimate{
   from {transform: translate(0,0);}
@@ -99,6 +102,9 @@ div.div-line{
           border: none;
           background: none;
           min-width: 60%;
+          &[type="file"]{
+            width:50%;
+          }
         }
         select{
           font-size: 1.6rem;
@@ -227,7 +233,7 @@ div.div-line{
           text-align: center;
           border-radius: 10px;
           background: #1f4762;
-          height: 1.5em;
+          height: 1.6em;
         }
       }
     }
@@ -244,6 +250,9 @@ div.div-line{
         border-collapse: collapse;
         thead {
           color: white;
+          th:first-of-type,th:last-of-type{
+            width: 25%;
+          }
         }
         tbody {
           background: #f3eec3;
@@ -254,7 +263,7 @@ div.div-line{
             td {
               padding: 5px 0;
               color: #fe9619;
-              font-size: 1.6rem;
+              font-size: 1.4rem;
               input{
                 width: 100%;
                 background: none;
@@ -264,6 +273,7 @@ div.div-line{
                 padding:0 5px;
               }
               &:nth-of-type(2) {
+                font-size: 1.6rem;
                 div {
                   position: relative;
                   background: #fe9619;
