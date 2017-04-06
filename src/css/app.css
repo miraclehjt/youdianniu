@@ -50,25 +50,61 @@ div.div-line {
 .display-none {
   display: none;
 }
-@keyframes boxAnimate {
+@-webkit-keyframes boxAnimate {
   from {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
   16.666% {
-    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
   }
   50% {
-    transform: translate(200%, 100%);
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
   }
   66.666% {
-    transform: translate(200%, 0);
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
   }
   100% {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes boxAnimate {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  16.666% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  50% {
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
+  }
+  66.666% {
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 .animate-begin {
-  animation: boxAnimate 3s;
+  -webkit-animation: boxAnimate 2s;
+          animation: boxAnimate 2s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -79,7 +115,8 @@ div.div-line {
   }
 }
 .fadeIn {
-  animation: fadeIn 1s forwards;
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
 }
 .register {
   background: url("../images/bg-1.jpg") no-repeat center;
@@ -524,11 +561,14 @@ div.div-line {
   background: #fe9619;
   border: none;
 }
-.awards-setting .add-awards .add-awards-div .awards-beizhu {
-  font-size: 2rem;
+.awards-setting .add-awards .add-awards-div .awards-number span {
+  float: right;
+  line-height: 2.5;
+  font-size: 1.6rem;
 }
-.awards-setting .add-awards .add-awards-div .awards-beizhu input {
-  line-height: 1.5rem;
+.awards-setting .add-awards .add-awards-div .awards-beizhu {
+  font-size: 1.4rem;
+  color: darkgray;
 }
 .awards-setting .add-awards .add-awards-div button.btn-submit {
   width: 30%;
