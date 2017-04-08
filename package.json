@@ -27,7 +27,7 @@
     "run-sequence": "^1.1.5",
     "through2-concurrent": "^1.1.0"
   },
-  "name": "gulp-project",
+  "name": "youdianniu",
   "version": "1.0.0",
   "description": "gulp",
   "main": "index.js",

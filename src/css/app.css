@@ -50,61 +50,25 @@ div.div-line {
 .display-none {
   display: none;
 }
-@-webkit-keyframes boxAnimate {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  16.666% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
-  }
-  50% {
-    -webkit-transform: translate(200%, 100%);
-            transform: translate(200%, 100%);
-  }
-  66.666% {
-    -webkit-transform: translate(200%, 0);
-            transform: translate(200%, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
 @keyframes boxAnimate {
   from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   16.666% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
   50% {
-    -webkit-transform: translate(200%, 100%);
-            transform: translate(200%, 100%);
+    transform: translate(200%, 100%);
   }
   66.666% {
-    -webkit-transform: translate(200%, 0);
-            transform: translate(200%, 0);
+    transform: translate(200%, 0);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 .animate-begin {
-  -webkit-animation: boxAnimate 2s;
-          animation: boxAnimate 2s;
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation: boxAnimate 2s;
 }
 @keyframes fadeIn {
   from {
@@ -115,8 +79,7 @@ div.div-line {
   }
 }
 .fadeIn {
-  -webkit-animation: fadeIn 1s forwards;
-          animation: fadeIn 1s forwards;
+  animation: fadeIn 1s forwards;
 }
 .register {
   background: url("../images/bg-1.jpg") no-repeat center;
@@ -783,7 +746,7 @@ div.div-line {
 }
 .choujiang .kaixiang .gif-kaixiang {
   position: absolute;
-  width: 80%;
+  width: 100%;
   top: 15%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
