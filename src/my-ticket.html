@@ -10,32 +10,53 @@
     <main class="ticket-area">
         <img src="images/ticket-head.png" alt="bg">
         <div class="ticket-contant">
+            <button><img src="images/btn-use.png" alt=""></button>
+            <img src="images/logo.jpg" alt="logo" class="shop-logo">
             <p class="ticket-name">麦当劳优惠券</p>
-            <p class="ticket-date">有效期至2017.03.20 19:00前</p>
-            <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
+            <p class="ticket-data">5折优惠券 <span>2017/03/16前使用</span></p>
+            <p class="shop-name">地址：深圳市福田区梅花路115号</p>
         </div>
         <div class="ticket-contant">
+            <button><img src="images/btn-use.png" alt=""></button>
+            <img src="images/logo.jpg" alt="logo" class="shop-logo">
             <p class="ticket-name">麦当劳优惠券</p>
-            <p class="ticket-date">有效期至2017.03.20 19:00前</p>
-            <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
+            <p class="ticket-data">5折优惠券 <span>2017/03/16前使用</span></p>
+            <p class="shop-name">地址：深圳市福田区梅花路115号</p>
         </div>
         <div class="ticket-contant">
+            <button><img src="images/btn-use.png" alt=""></button>
+            <img src="images/logo.jpg" alt="logo" class="shop-logo">
             <p class="ticket-name">麦当劳优惠券</p>
-            <p class="ticket-date">有效期至2017.03.20 19:00前</p>
-            <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
-        </div>
-        <div class="ticket-contant">
-            <p class="ticket-name">麦当劳优惠券</p>
-            <p class="ticket-date">有效期至2017.03.20 19:00前</p>
-            <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
-        </div>
-        <div class="ticket-contant">
-            <p class="ticket-name">麦当劳优惠券</p>
-            <p class="ticket-date">有效期至2017.03.20 19:00前</p>
-            <p class="shop-name">麦当劳梅林店（深圳市福田区梅花路115号）</p>
+            <p class="ticket-data">5折优惠券 <span>2017/03/16前使用</span></p>
+            <p class="shop-name">地址：深圳市福田区梅花路115号</p>
         </div>
     </main>
     <p class="tishi-info">没有更多可用券　　<span>请扫码抽奖</span></p>
     <button class="btn-submit">返　　回</button>
+    <div class="dialog ticket-use">
+        <div class="ticket-use-content">
+            <img src="images/logo.jpg" alt="logo" class="shop-logo">
+            <p class="ticket-name">麦当劳梅林店</p>
+            <p class="ticket-data">5折优惠券 <span>2017/03/16前使用</span></p>
+            <p class="shop-name">地址：深圳市福田区梅花路115号</p>
+            <button class="btn-use-ticket"><img src="images/btn-use-check.png" alt=""></button>
+        </div>
+    </div>
 </body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.ticket-contant').on('click',function(){
+            $('.ticket-use').show();
+            $('.dialog').on('click',function (e) {
+                if(e.target.classList.contains('ticket-use')){
+                    $(this).hide();
+                }
+            })
+            $('.btn-use-ticket').on('click',function () {
+                alert('使用！');
+            })
+        })
+    });
+</script>
 </html>

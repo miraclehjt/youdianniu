@@ -553,7 +553,7 @@ div.div-line {
   border-radius: 5px;
   background: #f9f9d8;
 }
-.my-ticket .ticket-area img {
+.my-ticket .ticket-area > img {
   position: absolute;
   width: 60%;
   top: 0;
@@ -562,15 +562,45 @@ div.div-line {
   transform: translate(-50%, -50%);
 }
 .my-ticket .ticket-area .ticket-contant {
+  position: relative;
   width: 90%;
   margin: 5px auto;
   background: url("../images/ticket-bg.png") no-repeat center;
   background-size: 100% 100%;
-  padding: 5px;
+  padding: 10px;
   color: white;
 }
+.my-ticket .ticket-area .ticket-contant button {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  color: transparent;
+  width: 20%;
+  border: none;
+  background: none;
+}
+.my-ticket .ticket-area .ticket-contant button img {
+  width: 100%;
+}
+.my-ticket .ticket-area .ticket-contant img.shop-logo {
+  width: 30px;
+  float: left;
+  margin: 5px 5px 0 0;
+}
+.my-ticket .ticket-area .ticket-contant p.ticket-data {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.my-ticket .ticket-area .ticket-contant p.ticket-data span {
+  font-size: 12px;
+  white-space: nowrap;
+}
 .my-ticket .ticket-area .ticket-contant p.ticket-name {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.my-ticket .ticket-area .ticket-contant p.shop-name {
+  font-size: 12px;
 }
 .my-ticket p.tishi-info {
   color: white;
@@ -581,6 +611,49 @@ div.div-line {
 }
 .my-ticket button.btn-submit {
   background: #fe9619;
+}
+.my-ticket .ticket-use {
+  padding-top: 40%;
+}
+.my-ticket .ticket-use .ticket-use-content {
+  width: 90%;
+  margin: 5px auto;
+  background: url("../images/ticket-bg.png") no-repeat center;
+  background-size: 100% 100%;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.my-ticket .ticket-use .ticket-use-content button {
+  display: block;
+  color: transparent;
+  width: 40%;
+  margin: 10px auto;
+  border: none;
+  background: none;
+}
+.my-ticket .ticket-use .ticket-use-content button img {
+  width: 100%;
+}
+.my-ticket .ticket-use .ticket-use-content img.shop-logo {
+  display: block;
+  margin: 10px auto;
+  width: 20%;
+}
+.my-ticket .ticket-use .ticket-use-content p.ticket-data {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.my-ticket .ticket-use .ticket-use-content p.ticket-data span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.my-ticket .ticket-use .ticket-use-content p.ticket-name {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.my-ticket .ticket-use .ticket-use-content p.shop-name {
+  font-size: 12px;
 }
 .choujiang {
   background: #e74143 url("../images/bg-3.jpg") no-repeat top;
@@ -652,20 +725,22 @@ div.div-line {
   right: 0;
 }
 .choujiang .meizhong {
+  display: block;
   padding-top: 30px;
 }
 .choujiang .meizhong .meizhong-info {
   background: url("../images/bg-meizhong.png") no-repeat top;
   background-size: 100% auto;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding-top: 90%;
+  padding-top: 40%;
   position: relative;
 }
 .choujiang .meizhong .meizhong-info .meizhong-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
+  width: 85%;
+  padding-bottom: 10px;
+  margin: 0 6% -1px 9%;
+  background: #fff0c5;
 }
 .choujiang .meizhong .meizhong-info .meizhong-content p {
   width: 100%;
@@ -673,6 +748,55 @@ div.div-line {
   font-size: 2rem;
   color: #8d5000;
   padding: 0 1em;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content {
+  background: #fff0c5;
+  width: 85%;
+  overflow: scroll;
+  margin: 0 6% 10px 9%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant {
+  width: 90%;
+  margin: 5px auto;
+  background: url("../images/ticket-bg-2.png") no-repeat center;
+  background-size: 100% 100%;
+  padding: 10px;
+  color: white;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant img.shop-logo {
+  width: 30px;
+  float: left;
+  margin: 5px 5px 0 0;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-data {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  text-align: center;
+  clear: both;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-name {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-name span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.shop-name {
+  font-size: 12px;
+}
+.choujiang .meizhong .meizhong-info .zhongjiang-content .xuanchuan-contant {
+  min-height: 4em;
+  width: 75%;
+  margin: 5px auto;
+  color: white;
+  font-size: 1.6rem;
+  background: #ff960e;
+  border: 3px solid #ff960e;
+  padding: 1px;
+  background-clip: content-box;
 }
 .choujiang .meizhong button {
   width: 60%;
@@ -699,15 +823,34 @@ div.div-line {
   border-bottom-right-radius: 5px;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant {
-  width: 75%;
+  width: 90%;
   margin: 5px auto;
   background: url("../images/ticket-bg-2.png") no-repeat center;
   background-size: 100% 100%;
-  padding: 5px;
+  padding: 10px;
   color: white;
 }
+.choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant img.shop-logo {
+  width: 30px;
+  float: left;
+  margin: 5px 5px 0 0;
+}
+.choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-data {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  text-align: center;
+  clear: both;
+}
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-name {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-name span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.shop-name {
+  font-size: 12px;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .xuanchuan-contant {
   min-height: 4em;
