@@ -50,25 +50,61 @@ div.div-line {
 .display-none {
   display: none;
 }
-@keyframes boxAnimate {
+@-webkit-keyframes boxAnimate {
   from {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
   16.666% {
-    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
   }
   50% {
-    transform: translate(200%, 100%);
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
   }
   66.666% {
-    transform: translate(200%, 0);
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
   }
   100% {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes boxAnimate {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  16.666% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  50% {
+    -webkit-transform: translate(200%, 100%);
+            transform: translate(200%, 100%);
+  }
+  66.666% {
+    -webkit-transform: translate(200%, 0);
+            transform: translate(200%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 .animate-begin {
-  animation: boxAnimate 2s;
+  -webkit-animation: boxAnimate 2s;
+          animation: boxAnimate 2s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -79,7 +115,8 @@ div.div-line {
   }
 }
 .fadeIn {
-  animation: fadeIn 1s forwards;
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
 }
 .register {
   background: url("../images/bg-1.jpg") no-repeat center;
@@ -563,6 +600,7 @@ div.div-line {
 }
 .my-ticket .ticket-area .ticket-contant {
   position: relative;
+  overflow: auto;
   width: 90%;
   margin: 5px auto;
   background: url("../images/ticket-bg.png") no-repeat center;
@@ -570,10 +608,12 @@ div.div-line {
   padding: 10px;
   color: white;
 }
+.my-ticket .ticket-area .ticket-contant h6.shop-name {
+  font-size: 18px;
+  text-align: center;
+}
 .my-ticket .ticket-area .ticket-contant button {
-  position: absolute;
-  top: 8%;
-  right: 5%;
+  float: right;
   color: transparent;
   width: 20%;
   border: none;
@@ -583,13 +623,14 @@ div.div-line {
   width: 100%;
 }
 .my-ticket .ticket-area .ticket-contant img.shop-logo {
-  width: 30px;
+  width: 20%;
   float: left;
-  margin: 5px 5px 0 0;
+  margin: 0 5px 0 0;
 }
 .my-ticket .ticket-area .ticket-contant p.ticket-data {
   font-size: 1.8rem;
   margin-bottom: 5px;
+  padding-left: 22%;
 }
 .my-ticket .ticket-area .ticket-contant p.ticket-data span {
   font-size: 12px;
@@ -598,9 +639,11 @@ div.div-line {
 .my-ticket .ticket-area .ticket-contant p.ticket-name {
   font-size: 1.8rem;
   line-height: 1.2;
+  padding-left: 22%;
 }
-.my-ticket .ticket-area .ticket-contant p.shop-name {
+.my-ticket .ticket-area .ticket-contant p.shop-addr {
   font-size: 12px;
+  clear: both;
 }
 .my-ticket p.tishi-info {
   color: white;
@@ -725,7 +768,6 @@ div.div-line {
   right: 0;
 }
 .choujiang .meizhong {
-  display: block;
   padding-top: 30px;
 }
 .choujiang .meizhong .meizhong-info {
@@ -759,6 +801,7 @@ div.div-line {
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant {
   width: 90%;
+  overflow: auto;
   margin: 5px auto;
   background: url("../images/ticket-bg-2.png") no-repeat center;
   background-size: 100% 100%;
@@ -766,19 +809,19 @@ div.div-line {
   color: white;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant img.shop-logo {
-  width: 30px;
+  width: 20%;
   float: left;
   margin: 5px 5px 0 0;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-data {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  text-align: center;
-  clear: both;
+  padding-left: 22%;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-name {
   font-size: 1.8rem;
   line-height: 1.2;
+  padding-left: 22%;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.ticket-name span {
   font-size: 12px;
@@ -786,6 +829,7 @@ div.div-line {
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .ticket-contant p.shop-name {
   font-size: 12px;
+  clear: both;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .xuanchuan-contant {
   min-height: 4em;
@@ -824,6 +868,7 @@ div.div-line {
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant {
   width: 90%;
+  overflow: auto;
   margin: 5px auto;
   background: url("../images/ticket-bg-2.png") no-repeat center;
   background-size: 100% 100%;
@@ -831,19 +876,19 @@ div.div-line {
   color: white;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant img.shop-logo {
-  width: 30px;
+  width: 20%;
   float: left;
   margin: 5px 5px 0 0;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-data {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  text-align: center;
-  clear: both;
+  padding-left: 22%;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-name {
   font-size: 1.8rem;
   line-height: 1.2;
+  padding-left: 22%;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.ticket-name span {
   font-size: 12px;
@@ -851,6 +896,7 @@ div.div-line {
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant p.shop-name {
   font-size: 12px;
+  clear: both;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .xuanchuan-contant {
   min-height: 4em;

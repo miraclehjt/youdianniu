@@ -401,16 +401,22 @@ div.div-line{
     }
     .ticket-contant{
       position: relative;
+      overflow: auto;
       width: 90%;
       margin:5px auto;
       background: url("../images/ticket-bg.png") no-repeat center;
       background-size: 100% 100%;
       padding:10px;
       color:white;
+      h6.shop-name{
+        font-size: 18px;
+        text-align: center;
+      }
       button{
-        position: absolute;
-        top:8%;
-        right:5%;
+        //position: absolute;
+        //top:8%;
+        //right:5%;
+        float: right;
         color:transparent;
         width: 20%;
         border: none;
@@ -420,13 +426,14 @@ div.div-line{
         }
       }
       img.shop-logo{
-        width: 30px;
+        width: 20%;
         float: left;
-        margin:5px 5px 0 0;
+        margin:0 5px 0 0;
       }
       p.ticket-data{
         font-size: 1.8rem;
         margin-bottom: 5px;
+        padding-left: 22%;
         span{
           font-size: 12px;
           white-space: nowrap;
@@ -435,9 +442,11 @@ div.div-line{
       p.ticket-name{
         font-size: 1.8rem;
         line-height: 1.2;
+        padding-left: 22%;
       }
-      p.shop-name{
+      p.shop-addr{
         font-size: 12px;
+        clear: both;
       }
     }
   }
@@ -566,7 +575,6 @@ div.div-line{
     }
   }
   .meizhong{
-    display: block;
     padding-top: 30px;
     .meizhong-info{
       background: url("../images/bg-meizhong.png") no-repeat top;
@@ -597,25 +605,26 @@ div.div-line{
         border-bottom-right-radius: 5px;
         .ticket-contant{
           width: 90%;
+          overflow: auto;
           margin:5px auto;
           background: url("../images/ticket-bg-2.png") no-repeat center;
           background-size: 100% 100%;
           padding:10px;
           color:white;
           img.shop-logo{
-            width: 30px;
+            width: 20%;
             float: left;
             margin:5px 5px 0 0;
           }
           p.ticket-data{
             font-size: 1.8rem;
             margin-bottom: 5px;
-            text-align: center;
-            clear: both;
+            padding-left: 22%;
           }
           p.ticket-name{
             font-size: 1.8rem;
             line-height: 1.2;
+            padding-left: 22%;
             span{
               font-size: 12px;
               white-space: nowrap;
@@ -623,6 +632,7 @@ div.div-line{
           }
           p.shop-name{
             font-size: 12px;
+            clear: both;
           }
         }
         .xuanchuan-contant{
@@ -662,25 +672,26 @@ div.div-line{
         border-bottom-right-radius: 5px;
         .ticket-contant{
           width: 90%;
+          overflow: auto;
           margin:5px auto;
           background: url("../images/ticket-bg-2.png") no-repeat center;
           background-size: 100% 100%;
           padding:10px;
           color:white;
           img.shop-logo{
-            width: 30px;
+            width: 20%;
             float: left;
             margin:5px 5px 0 0;
           }
           p.ticket-data{
             font-size: 1.8rem;
             margin-bottom: 5px;
-            text-align: center;
-            clear: both;
+            padding-left: 22%;
           }
           p.ticket-name{
             font-size: 1.8rem;
             line-height: 1.2;
+            padding-left: 22%;
             span{
               font-size: 12px;
               white-space: nowrap;
@@ -688,6 +699,7 @@ div.div-line{
           }
           p.shop-name{
             font-size: 12px;
+            clear: both;
           }
         }
         .xuanchuan-contant{
