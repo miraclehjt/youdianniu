@@ -261,6 +261,20 @@ div.div-line{
         tbody {
           background: #f3eec3;
           tr {
+            &.line-tuiguang{
+              td{
+                color:#666;
+                div#tuiguang-bianji{
+                  color:#666;
+                  padding:5px 0;
+                }
+              }
+            }
+            &.line-link{
+              td{
+                color:#666;
+              }
+            }
             &:nth-of-type(odd){
               background: #f9f9d8;
             }
@@ -271,7 +285,7 @@ div.div-line{
               input{
                 width: 100%;
                 background: none;
-                border: none;
+                border: 1px solid #ccc;
                 font-size: 1.6rem;
                 min-height:2em;
                 padding:0 5px;
@@ -332,26 +346,13 @@ div.div-line{
           color:#d72517;
         }
       }
-      .awards-name{
-        text-align: center;
+      .awards-name,.awards-info,.awards-number{
         margin-bottom: 10px;
-        input{
-          text-align: center;
-          width: 70%;
-          font-size: 2rem;
-          line-height: 2;
-          color:#d72517;
-          background: #fe9619;
-          border:none;
-        }
-      }
-      .awards-number{
-        margin-bottom: 10px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         input{
           text-align: center;
           width: 5em;
-          font-size: 2rem;
+          font-size: 1.5rem;
           line-height: 2;
           color:#d72517;
           background: #fe9619;
@@ -363,10 +364,108 @@ div.div-line{
           font-size: 1.6rem;
         }
       }
-
+      .awards-name{
+        input{
+          margin-left: 2em;
+          width: 10em;
+        }
+      }
+      .awards-info{
+        input{
+          width: 10em;
+        }
+      }
+      .awards-number{
+        input{
+          margin-left: 2em;
+        }
+      }
       .awards-beizhu{
         font-size: 1.4rem;
         color:darkgray;
+      }
+      button.btn-submit{
+        width: 30%;
+        font-size: 1.4rem;
+        height: 2.5rem;
+        background: #fe9619;
+        margin:10px auto;
+      }
+    }
+  }
+  .add-tuiguang{
+    .add-tuiguang-div{
+      width: 90%;
+      margin: 30px auto 0 auto;
+      padding:10px 5px;
+      background: #fff4dc;
+      border-radius: 10px;
+      p,h3{
+        color:#d72517;
+      }
+      h3{
+        text-align: center;
+        font-size: 2rem;
+      }
+      p.switch-line{
+        margin:10px 0;
+        font-size:1.5rem;
+        color:white;
+        height: 2em;
+        text-align: center;
+        button{
+          width: 6em;
+          height: 100%;
+          background: #fe9619;
+          border:none;
+          &#btn-tu{
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            margin-right:1px;
+          }
+          &#btn-wen{
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            margin-left:1px;
+          }
+          &.active{
+            background: #8d5000;
+          }
+        }
+      }
+      div.switch-tu{
+        div.tuiguang-img{
+          position: relative;
+          padding-bottom:45%;
+          margin-bottom: 10px;
+          overflow: hidden;
+          img{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      div.switch-wen{
+        display: none;
+        .input-area{
+          position: relative;
+          padding-bottom:45%;
+          margin-bottom: 10px;
+          overflow: hidden;
+          textarea{
+            position: absolute;
+            font-size: 1.5rem;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            resize: none;
+            overflow: hidden;
+          }
+        }
       }
       button.btn-submit{
         width: 30%;

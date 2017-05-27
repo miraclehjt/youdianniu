@@ -59,8 +59,18 @@
                         </td>
                         <td>10名</td>
                     </tr>
-                    <tr>
-                        <td colspan="3"><input type="text" placeholder="此条为宣传标语，商家可自行填写"></td>
+                    <tr class="line-tuiguang">
+                        <td>推广</td>
+                        <td>
+                            <div id="tuiguang-bianji">
+                                点击编辑
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="line-link">
+                        <td>跳转链接</td>
+                        <td colspan="2"><input type="text" placeholder="请输入链接地址"></td>
                     </tr>
                 </tbody>
             </table>
@@ -68,7 +78,6 @@
         <button class="btn-submit">确　　定</button>
     </main>
     <div class="dialog add-awards">
-        <div>
             <div class="add-awards-div">
                 <h3>
                     <select name="awards-level">
@@ -79,13 +88,34 @@
                         <option value="4">五等奖</option>
                     </select>
                 </h3>
-                <p class="awards-name"><input type="text"></p>
+                <p class="awards-name">奖品：<input type="text"></p>
+                <p class="awards-info">使用条件：<input type="text"></p>
                 <p class="awards-number">数量：<input type="number">个　<span>剩余152个</span></p>
                 <div class="div-line"></div>
                 <p class="awards-beizhu">备注：如果有剩余抽奖数量，将自动添加到最后一个奖项中。</p>
                 <button class="btn-submit">确　认</button>
             </div>
-        </div>
+    </div>
+    <div class="dialog add-tuiguang">
+            <div class="add-tuiguang-div">
+                <h3>推广</h3>
+                <p class="switch-line"><button id="btn-tu" class="active">图片</button><button id="btn-wen">文字</button></p>
+                <div class="switch-tu">
+                    <div class="tuiguang-img">
+                        <img src="./images/bg-1.jpg" alt="">
+                    </div>
+                    <form>
+                        <input type="file">
+                        <input type="submit" value="上传">
+                    </form>
+                </div>
+                <div class="switch-wen">
+                    <div class="input-area">
+                        <textarea rows="6" placeholder="输入内容不可超出显示区域，否则无法完整显示！"></textarea>
+                    </div>
+                </div>
+                <button class="btn-submit">确　认</button>
+            </div>
     </div>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <script>
@@ -101,6 +131,27 @@
         });
         $('.change-awards .write-awards').on('click',function () {
             $('.add-awards').show();
+        });
+        $('#tuiguang-bianji').on('click',function () {
+            $('.add-tuiguang').show();
+        });
+        $('.add-tuiguang .btn-submit').on('click',function () {
+            $('.add-tuiguang').hide();
+        });
+        $('#btn-tu').on('click',function () {
+            $(this).attr('class','active');
+            $('#btn-wen').attr('class','');
+            $('.switch-tu').show();
+            $('.switch-wen').hide();
+            $('.switch-wen textarea').val('');
+        });
+        $('#btn-wen').on('click',function () {
+            $(this).attr('class','active');
+            $('#btn-tu').attr('class','');
+            $('.switch-tu').hide();
+            $('.switch-wen').show();
+            $('.switch-tu input[type=file]').val('');
+            $('.switch-tu img').remove();
         });
     })
 </script>
