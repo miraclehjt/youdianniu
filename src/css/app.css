@@ -809,6 +809,129 @@ div.div-line {
   font-size: 16px;
   line-height: 1.5;
 }
+.my-ticket .ticket-area .tuiguang-contant {
+  position: relative;
+  background: #f3d5f5;
+  overflow: hidden;
+}
+.my-ticket .ticket-area .tuiguang-contant > header {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 10px 2px 10px;
+}
+.my-ticket .ticket-area .tuiguang-contant > header .shop-logo {
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  padding-bottom: 15%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.my-ticket .ticket-area .tuiguang-contant > header .shop-logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.my-ticket .ticket-area .tuiguang-contant > header h1.shop-name {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-img {
+  display: block;
+  position: relative;
+  width: 95%;
+  padding-bottom: 45%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-img p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-img p span {
+  float: right;
+  margin-right: 10px;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-wen {
+  display: block;
+  position: relative;
+  width: 95%;
+  padding-bottom: 45%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-wen div.tuiguang-text {
+  position: absolute;
+  background: #eee;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-wen p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.my-ticket .ticket-area .tuiguang-contant > main.tuiguang-wen p span {
+  float: right;
+  margin-right: 10px;
+}
+.my-ticket .ticket-area .tuiguang-contant p.shop-addr {
+  font-size: 14px;
+  padding-left: 2.5%;
+  margin-bottom: 10px;
+}
+.my-ticket .ticket-area .tuiguang-contant i.line-dashed {
+  position: absolute;
+  display: block;
+  background: none;
+  border-bottom: 1px dashed #eee;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.my-ticket .ticket-area .tuiguang-contant i.ico {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #cb274e;
+  border-radius: 50px;
+  z-index: 10;
+}
+.my-ticket .ticket-area .tuiguang-contant i.ico-top-left {
+  top: -5px;
+  left: -5px;
+}
+.my-ticket .ticket-area .tuiguang-contant i.ico-top-right {
+  top: -5px;
+  right: -5px;
+}
+.my-ticket .ticket-area .tuiguang-contant i.ico-bottom-left {
+  bottom: -5px;
+  left: -5px;
+}
+.my-ticket .ticket-area .tuiguang-contant i.ico-bottom-right {
+  bottom: -5px;
+  right: -5px;
+}
 .choujiang {
   background: #e74143 url("../images/bg-3.jpg") no-repeat top;
   background-size: 100%;
@@ -909,7 +1032,7 @@ div.div-line {
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .tuiguang-contant {
   position: relative;
-  background: white;
+  background: #f3d5f5;
   overflow: hidden;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .tuiguang-contant > header {
@@ -1162,7 +1285,7 @@ div.div-line {
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .tuiguang-contant {
   position: relative;
-  background: white;
+  background: #f3d5f5;
   overflow: hidden;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .tuiguang-contant > header {
