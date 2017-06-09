@@ -696,7 +696,7 @@ div.div-line {
 }
 .my-ticket .ticket-area {
   position: relative;
-  width: 90%;
+  width: 97%;
   margin: 20px auto;
 }
 .my-ticket .ticket-area .ticket-contant {
@@ -879,42 +879,37 @@ div.div-line {
   right: 0;
 }
 .choujiang .meizhong {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .choujiang .meizhong .meizhong-info {
-  background: url("../images/bg-meizhong.png") no-repeat top;
-  background-size: 100% auto;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 40%;
+  padding-top: 15%;
   position: relative;
 }
 .choujiang .meizhong .meizhong-info .meizhong-content {
-  width: 85%;
-  padding-bottom: 10px;
-  margin: 0 6% -1px 9%;
-  background: #fff0c5;
+  width: 98%;
+  padding: 10px;
+  margin: 0 1%;
+  background: #cb274e;
 }
 .choujiang .meizhong .meizhong-info .meizhong-content p {
   width: 100%;
   text-align: center;
   font-size: 2rem;
-  color: #8d5000;
+  color: white;
   padding: 0 1em;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content {
-  background: #fff0c5;
-  width: 85%;
+  background: #cb274e;
+  width: 98%;
   overflow: scroll;
-  padding-bottom: 10px;
-  margin: 0 6% 10px 9%;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  padding: 3px;
+  margin: 0 1%;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .tuiguang-contant {
   position: relative;
   background: white;
-  border-radius: 5px;
   overflow: hidden;
 }
 .choujiang .meizhong .meizhong-info .zhongjiang-content .tuiguang-contant > header {
@@ -1015,7 +1010,7 @@ div.div-line {
   display: block;
   width: 10px;
   height: 10px;
-  background: #fff0c5;
+  background: #cb274e;
   border-radius: 50px;
   z-index: 10;
 }
@@ -1041,27 +1036,23 @@ div.div-line {
   color: #ffe26a;
 }
 .choujiang .zhongjiang {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .choujiang .zhongjiang .zhongjiang-info {
-  background: url("../images/bg-zhongjiang.png") no-repeat top;
-  background-size: 100% auto;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 37%;
+  padding-top: 15%;
   position: relative;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content {
-  background: #fff0c5;
-  width: 84%;
+  background: #cb274e;
+  width: 98%;
   overflow: scroll;
-  margin: 0 8%;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  margin: 0 1%;
+  padding: 3px;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant {
   background: white;
-  border-radius: 5px;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .ticket-contant i.line-dashed {
   position: absolute;
@@ -1078,7 +1069,7 @@ div.div-line {
   display: block;
   width: 10px;
   height: 10px;
-  background: #fff0c5;
+  background: #cb274e;
   border-radius: 50px;
   z-index: 10;
 }
@@ -1172,7 +1163,6 @@ div.div-line {
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .tuiguang-contant {
   position: relative;
   background: white;
-  border-radius: 5px;
   overflow: hidden;
 }
 .choujiang .zhongjiang .zhongjiang-info .zhongjiang-content .tuiguang-contant > header {
@@ -1273,7 +1263,7 @@ div.div-line {
   display: block;
   width: 10px;
   height: 10px;
-  background: #fff0c5;
+  background: #cb274e;
   border-radius: 50px;
   z-index: 10;
 }
